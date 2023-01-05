@@ -19,8 +19,8 @@ body{
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3,1fr);
   justify-items: center;
-  
 }
+
 .card-top{
   background-color: var(--select-blue);
   display: flex;
@@ -47,7 +47,8 @@ body{
   height: fit-content;
   padding: 1px;
   margin-right: 1vw;
-  padding-bottom: 1em
+  padding-bottom: 1em;
+  min-width: 370px;
 }
 
 .card-body{
