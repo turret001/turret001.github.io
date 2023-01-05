@@ -1,26 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-:root{
-  --gui-body:#c0c0c0;
-  --gui-header:#808080;
-  --select-blue:#000080;
-  --desktop:#008080;
-  --button-bg:#C2C2C3;
-}
-body{
-  background-color: var(--desktop);
-}
-
-#card-holder{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3,1fr);
-  justify-items: center;
-}
-
 .card-top{
   background-color: var(--select-blue);
   display: flex;
@@ -30,25 +7,27 @@ body{
   line-height: 1;
   
 }
+
 .card-top > h2{
   color: whitesmoke;
   font-size: medium;
   margin-left: 1em;
   padding-top: 1px
 }
+
 .card-top > p{
   background-color: red;
   padding: 1px;
   color: whitesmoke;
 }
+
 .card{
   background-color: var(--gui-body);
   width: 20vw;
   height: fit-content;
   padding: 1px;
-  margin-right: 1vw;
   padding-bottom: 1em;
-  min-width: 370px;
+  min-width: 250px;
 }
 
 .card-body{
@@ -56,18 +35,8 @@ body{
   display: flex;
 }
 
-.card-body > img{
-  /* border-radius: 50%; */
-  width: 30%;
-  height: auto;
-}
-
 .card-body > p{
-  margin-left: 1em;
-}
-
-.card-bottom{
-  margin-left: 1em;
+  padding-left: 1em;
 }
 
 .w-button{
@@ -97,3 +66,4 @@ body{
   justify-content: space-around;
   margin-top: 0.5em;
 }
+

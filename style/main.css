@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --gui-body:#c0c0c0;
+  --gui-header:#808080;
+  --select-blue:#000080;
+  --desktop:#008080;
+  --button-bg:#C2C2C3;
+}
+body{
+  background-color: var(--desktop);
+}
+
+.c{
+  text-align: center;
+}
+
+#card-holder{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+#selfie img{
+  /* border-radius: 50%; */
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* media query if screen size is below 1160px */
+@media screen and (max-width: 1160px){
+  #card-holder{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4,1fr);
+  }
+}
+
+/* media query if screen size is below 757px */
+@media screen and (max-width: 757px){
+  #card-holder{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6,1fr);
+  }
+}
+
+/* media query if screen size is below 373px */
+@media screen and (max-width: 373px){
+  #selfie > .card-body{
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
