@@ -24,6 +24,7 @@ body{
   grid-template-rows: repeat(3,1fr);
   justify-items: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 #selfie img{

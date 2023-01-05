@@ -1,3 +1,11 @@
+:root{
+  --gui-body:#c0c0c0;
+  --gui-header:#808080;
+  --select-blue:#000080;
+  --desktop:#008080;
+  --button-active:#E1E1E2;
+}
+
 .card-top{
   background-color: var(--select-blue);
   display: flex;
@@ -28,6 +36,10 @@
   padding: 1px;
   padding-bottom: 1em;
   min-width: 250px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .card-body{
@@ -50,6 +62,12 @@
   font-size: 1.5em;
   padding: 0.1em 0.5em;
 }
+
+.w-button:active{
+  background-color: var(--button-active);
+  box-shadow: 1px 1px 1px black;
+}
+
 .card-bottom > a{
   text-decoration: none;
   margin-top: 0.5em;
