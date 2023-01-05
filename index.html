@@ -12,7 +12,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="clippy.css" media="all" />
+    <!-- <link rel="stylesheet" type="text/css" href="clippy.css" media="all" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css" />
 
   </head>
@@ -22,24 +23,73 @@
       <ul>
         <li><a href="#welcome">Welcome</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="https://github.com/turret001" id="profile-link" target="_blank" >Github</a></li>
+        <li><a href="https://github.com/turret001" id="profile-link" target="_blank">Github</a></li>
       </ul>
     </nav>
-    
+    <!-- TODO:
+    1) Weather App on mainpage
+    2) Currency converter(?)
+    3) ??????????
+    4) maybe some sort of a music player or a random music picker from spotify
+    5) ?????????????????? 
+    6) (eventually) re-do everything in React 😬-->
+    <div id="main">
+      <div id="card-holder">
+        <div class="card" id="selfie">
+          <div class="card-top">
+            <h2 class="card-title">Hi, welcome!!</h2>
+            <p><a href="">X</a></p>
+          </div>
+          <div class="card-body">
+            <img src="images/benpp.png" alt="" />
+            <p>thanks for dropping by! as you might've guessed, I'm a huge w95-98 aesthetics fan.<br><br> this is my personal website, to be honest there's nothing personal about it since it's just out there on the internet! <br> take a look around, I hope you find my portfolio interesting!</p>
+            <p></p>
+          </div>
+          <div class="card-bottom">
+            <h2>click on em!</h2>
+            <div class="card-link-holder">
+              <!-- TODO: replace icons with w95 icons, add text to them -->
+              <a href="https://www.linkedin.com/in/kemalcanakcan/" target="_blank" class="fa fa-linkedin w-button"></a>
+              <!-- <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram w-button"></a> -->
+              <a href="https://www.youtube.com/watch?v=0LwcvjNJTuM" target="_blank" class="fa fa-twitter w-button"></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <h2 class="card-title">Projects</h2>
+            <p>X</p>
+          </div>
+          <div class="card-body">
+            <p>lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <h2 class="card-title">Hi</h2>
+            <p>X</p>
+          </div>
+          <div class="card-body">
+            <p>lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- jQuery 1.7+ -->
-    <script src="https://code.jquery.com/jquery-1.7.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.7.min.js"></script> -->
     <!-- Clippy.js -->
-    <script src="clippy.js"></script>
+    <!-- <script src="clippy.js"></script> -->
     <!-- Init script -->
-    <script type="text/javascript">
+
+    <!-- <script type="text/javascript">
       clippy.load("Rover", function (agent) {
         agent.show();
         agent.play("Greet");
         agent.speak("Hi, I'm Rover! Welcome to my portfolio!");
         console.log(agent.animations())
       });
-    </script>
+    </script> -->
   </body>
 </html>
