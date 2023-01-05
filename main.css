@@ -8,7 +8,91 @@
   --gui-header:#808080;
   --select-blue:#000080;
   --desktop:#008080;
+  --button-bg:#C2C2C3;
 }
 body{
   background-color: var(--desktop);
+}
+
+#card-holder{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  justify-items: center;
+  
+}
+.card-top{
+  background-color: var(--select-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1;
+  
+}
+.card-top > h2{
+  color: whitesmoke;
+  font-size: medium;
+  margin-left: 1em;
+  padding-top: 1px
+}
+.card-top > p{
+  background-color: red;
+  padding: 1px;
+  color: whitesmoke;
+}
+.card{
+  background-color: var(--gui-body);
+  width: 20vw;
+  height: fit-content;
+  padding: 1px;
+  margin-right: 1vw;
+  padding-bottom: 1em
+}
+
+.card-body{
+  margin: 1em;
+  display: flex;
+}
+
+.card-body > img{
+  /* border-radius: 50%; */
+  width: 30%;
+  height: auto;
+}
+
+.card-body > p{
+  margin-left: 1em;
+}
+
+.card-bottom{
+  margin-left: 1em;
+}
+
+.w-button{
+  background-color: var(--button-bg);
+  color:black;
+  box-shadow: 1px 1px 2px black;
+  text-decoration: none;
+  border: 1px solid #a0a0a0;
+  width: 3em;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.1em 0.5em;
+}
+.card-bottom > a{
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+
+.card-bottom > a:visited{
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+
+.card-link-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 0.5em;
 }
