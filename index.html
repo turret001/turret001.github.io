@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/card.css" />
-
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='http://www.openlayers.org/api/OpenLayers.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
+    <script src='js/location-picker.js'></script>
   </head>
 
   <body>
@@ -27,8 +30,12 @@
         <li><a href="https://github.com/turret001" id="profile-link" target="_blank">Github</a></li> 
       </ul> -->
     </nav>
-
-    
+    <div class='location-picker'>
+      <div class='map-container'>
+          <div id='map' data-type='map'></div>
+      </div>
+      <p id="output"></p>
+    </div>
     <!-- TODO:
     1) Weather App on mainpage
     2) Currency converter(?)
@@ -39,6 +46,8 @@
 
     <div id="main">
       <div id="card-holder">
+
+
         <div class="card" id="selfie">
           <div class="card-top">
             <h2 class="card-title">Hi, welcome!!</h2>
@@ -59,6 +68,8 @@
             </div>
           </div>
         </div>
+
+
         <div class="card">
           <div class="card-top">
             <h2 class="card-title">Projects</h2>
@@ -68,17 +79,61 @@
             <p>lorem ipsum dolor sit amet</p>
           </div>
         </div>
-        <div class="card">
+
+
+        <div class="card" id="weather">
           <div class="card-top">
-            <h2 class="card-title">Hi</h2>
-            <p>X</p>
+            <h2 class="card-title">Weather</h2>
+            <div class="card-a-buttons">
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
+              <p>X</p>
+            </div>
           </div>
           <div class="card-body">
-            <p>lorem ipsum dolor sit amet</p>
+            <img src="images/weather/moon.png" alt="" width="32" height="32"/>
+            <div class="card-text">
+              <h3 id="w-title"><span id="w-temp">-1</span>, <span id="w-status">Clear</span></h3>
+              <p>it's going to be <span id="w-tomorrow">Rainy</span> tomorrow</p>
+            </div>
           </div>
+          <div class="card-bottom"><p style="text-align:right; font-size:13px">Pick Location</p></div>
         </div>
+
+        <!-- 
+          Weather API: https://open-meteo.com/en/docs#latitude=52.52&longitude=13.41&daily=weathercode&current_weather=true&timezone=auto
+          0-1-2-3 - güneşli/açık hava
+          45-48 - sisli hava
+          51-53-55-56-57-61-63-65-66-67-80-81-82-95-96-99 - yağmurlu hava
+          71-73-75-77-85-86 - karlı hava
+         -->
+        
       </div>
     </div>
-  
+  <script>
+    $(function(){
+            var locationPicker = $('.location-picker').locationPicker({
+                locationChanged : function(data){
+                    $('#output').text(JSON.stringify(data));
+                }
+            });
+    });
+    </script> 
+  <script>
+    let x = document.getElementById("w-title");
+
+    function getLocation(){
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>
   </body>
 </html>

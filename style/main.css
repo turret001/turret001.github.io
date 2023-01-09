@@ -33,6 +33,38 @@ body{
   max-height: 100px;
 }
 
+#weather > .card-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#weather .card-text{
+  text-align: center;
+}
+#weather .card-bottom{
+  margin: 0em 1em;
+}
+#weather .card-bottom > input{
+  width: 100%;
+}
+
+.location-picker {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  z-index: 100;
+  width: 500px;
+  height: 500px;
+}
+#map { height: 400px; width:100%;}
+.map-container { }
+
 /* media query if screen size is below 1160px */
 @media screen and (max-width: 1160px){
   #card-holder{

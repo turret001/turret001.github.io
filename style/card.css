@@ -13,7 +13,7 @@
   justify-content: space-between;
   width: 100%;
   line-height: 1;
-  
+  margin-bottom: 1px;  
 }
 
 .card-top > h2{
@@ -23,10 +23,15 @@
   padding-top: 1px
 }
 
-.card-top > p{
-  background-color: red;
+.card-top p{
+  background-color: var(--button-bg);
   padding: 1px;
   color: whitesmoke;
+  border: var(--select-blue) 1px solid;
+  color: black;
+}
+.card-a-buttons{
+  display: flex;
 }
 
 .card{
@@ -85,3 +90,4 @@
   margin-top: 0.5em;
 }
 
+  
