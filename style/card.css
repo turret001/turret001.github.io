@@ -18,7 +18,7 @@
 
 .card-top > h2{
   color: whitesmoke;
-  font-size: medium;
+  font-size: 0.9em;
   margin-left: 1em;
   padding-top: 1px
 }
@@ -30,6 +30,7 @@
   border: var(--select-blue) 1px solid;
   color: black;
 }
+
 .card-a-buttons{
   display: flex;
 }

@@ -16,97 +16,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/card.css" />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script src='http://www.openlayers.org/api/OpenLayers.js'></script>
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
-    <script src='js/location-picker.js'></script>
   </head>
 
   <body>
-    <nav id="navbar"> 
-      <!-- <ul>
-        <li><a href="#welcome">Welcome</a></li>
-        <li><a href="#projects">Projects</a></li> 
-        <li><a href="https://github.com/turret001" id="profile-link" target="_blank">Github</a></li> 
-      </ul> -->
-    </nav>
-    <div class='location-picker'>
-      <div class='map-container'>
-          <div id='map' data-type='map'></div>
-      </div>
-      <p id="output"></p>
-    </div>
+  
     <!-- TODO:
     1) Weather App on mainpage
     2) Currency converter(?)
-    3) ??????????
-    4) maybe some sort of a music player or a random music picker from spotify
-    5) ?????????????????? 
+    4) Nightwave Plaza
     6) (eventually) re-do everything in React 😬-->
 
     <div id="main">
       <div id="card-holder">
 
-
-        <div class="card" id="selfie">
-          <div class="card-top">
-            <h2 class="card-title">Hi, welcome!!</h2>
-            <p><a href="">X</a></p>
-          </div>
-          <div class="card-body">
-            <img src="images/benpp.png" alt="image of a dude dressed in guns and roses tshirt" />
-            <p>thanks for dropping by! as you might've guessed, I'm a huge w95-98 aesthetics fan.<br><br> this is my personal website, to be honest there's nothing personal about it since it's just out there on the internet! <br> take a look around, I hope you find my portfolio interesting!</p>
-            
-          </div>
-          <div class="card-bottom">
-            <h2 class="c">click on em!</h2>
-            <div class="card-link-holder">
-              <!-- TODO: replace icons with w95 icons, add text to them -->
-              <a href="https://www.linkedin.com/in/kemalcanakcan/" target="_blank" class="fa fa-linkedin w-button"></a>
-              <a href="https://github.com/turret001" target="_blank" class="fa fa-github w-button"></a>
-              <a href="https://www.youtube.com/watch?v=0LwcvjNJTuM" target="_blank" class="fa fa-twitter w-button"></a>
+        <div class="main-left">
+          <div class="card" id="selfie">
+            <div class="card-top">
+              <h2 class="card-title">welcome.exe</h2>
+              <p><a href="">X</a></p>
+            </div>
+            <div class="card-body">
+              <img src="images/benpp.png" alt="image of a dude dressed in guns and roses tshirt" />
+              <p>thanks for dropping by! as you might've guessed, I'm a huge w95-98 aesthetics fan.<br><br> this is my personal website, and to be honest there's nothing personal about it since it's just out there on the internet! <br> take a look around, I hope you find my "portfolio" interesting!</p>
+              
+            </div>
+            <div class="card-bottom">
+              <div class="card-link-holder">
+                <!-- TODO: replace icons with w95 icons, add text to them -->
+                <a href="https://www.linkedin.com/in/kemalcanakcan/" target="_blank" class="fa fa-linkedin w-button"></a>
+                <a href="https://github.com/turret001" target="_blank" class="fa fa-github w-button"></a>
+                <a href="https://www.youtube.com/watch?v=0LwcvjNJTuM" target="_blank" class="fa fa-twitter w-button"></a>
+              </div>
             </div>
           </div>
-        </div>
 
 
-        <div class="card">
-          <div class="card-top">
-            <h2 class="card-title">Projects</h2>
-            <p>X</p>
-          </div>
-          <div class="card-body">
-            <p>lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-
-
-        <div class="card" id="weather">
-          <div class="card-top">
-            <h2 class="card-title">Weather</h2>
-            <div class="card-a-buttons">
-              <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
-              <p>X</p>
-            </div>
-          </div>
-          <div class="card-body">
-            <img src="images/weather/moon.png" alt="" width="32" height="32"/>
-            <div class="card-text">
-              <h3 id="w-title"><span id="w-temp">-1</span>, <span id="w-status">Clear</span></h3>
-              <p>it's going to be <span id="w-tomorrow">Rainy</span> tomorrow</p>
-            </div>
-          </div>
-          <div class="card-bottom"><p style="text-align:right; font-size:13px">Pick Location</p></div>
-        </div>
-
-        <!-- 
+          <!-- 
           Weather API: https://open-meteo.com/en/docs#latitude=52.52&longitude=13.41&daily=weathercode&current_weather=true&timezone=auto
           0-1-2-3 - güneşli/açık hava
           45-48 - sisli hava
           51-53-55-56-57-61-63-65-66-67-80-81-82-95-96-99 - yağmurlu hava
           71-73-75-77-85-86 - karlı hava
          -->
-        
+        </div>
+
+        <div class="main-right">
+          <div class="card" id="fake-browser">
+            <div class="card-top">
+              <h2 class="card-title">Internet Explorer</h2>
+              <p>X</p>
+            </div>
+            <div class="browser-buttons">
+              <ul>
+                <li>File</li>
+                <li>Edit</li>
+                <li>View</li>
+                <li>Go</li>
+                <li>Favorites</li>
+                <li>Help</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   <script>

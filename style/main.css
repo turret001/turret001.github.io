@@ -12,19 +12,22 @@
 }
 body{
   background-color: var(--desktop);
-}
-
-.c{
-  text-align: center;
+  overflow: hidden;
 }
 
 #card-holder{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3,1fr);
-  justify-items: center;
-  align-items: center;
-  margin-top: 1em;
+  display:flex;
+  flex-direction: row;
+}
+.main-left{
+  flex-grow: auto;
+  padding: 1em;
+  /* margin: 1em 1em; */
+}
+.main-right{
+  flex-grow: 3;
+  padding: 1em;
+  height: 100vh;
 }
 
 #selfie img{
@@ -33,58 +36,15 @@ body{
   max-height: 100px;
 }
 
-#weather > .card-body{
+#fake-browser{
+  width: 100%;
+  height: 100%;
+}
+
+.browser-buttons{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
 }
 
-#weather .card-text{
-  text-align: center;
-}
-#weather .card-bottom{
-  margin: 0em 1em;
-}
-#weather .card-bottom > input{
-  width: 100%;
-}
-
-.location-picker {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border: 1px solid black;
-  padding: 20px;
-  z-index: 100;
-  width: 500px;
-  height: 500px;
-}
-#map { height: 400px; width:100%;}
-.map-container { }
-
-/* media query if screen size is below 1160px */
-@media screen and (max-width: 1160px){
-  #card-holder{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4,1fr);
-  }
-}
-
-/* media query if screen size is below 757px */
-@media screen and (max-width: 757px){
-  #card-holder{
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6,1fr);
-  }
-}
-
-/* media query if screen size is below 373px */
-@media screen and (max-width: 373px){
-  #selfie > .card-body{
-    flex-direction: column !important;
-    align-items: center;
-  }
-}
