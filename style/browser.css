@@ -1,0 +1,121 @@
+/* Wrapper that contains the part in-between window title and browser content */
+.browser-bar{
+    border: 1px solid #818181;
+}
+
+/* Wrapper that holds File, Edit, etc buttons & world icon  */
+/* ---------------------------------------------------- */
+.browser-layer-one{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    justify-content: space-between;
+}
+
+.browser-layer-one::before{
+    content:' | ';
+}
+
+.browser-layer-one > p{ /* world icon */
+    background-color: black;
+    padding: 0 0.5em;
+    border-left: 1px solid white;
+}
+/* ---------------------------------------------------- */
+
+
+/* File, Edit, View wrapper */
+/* ---------------------------------------------------- */
+.browser-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+.browser-buttons ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.browser-buttons li{
+    padding:2px 5px;
+    font-size: 15px;
+    user-select: none;
+}
+
+.browser-buttons li::first-letter{
+    text-decoration: underline;
+}
+
+.browser-buttons li:hover{
+    background-color: aliceblue;
+    cursor:default;
+}
+
+.browser-buttons{
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+}
+/* ---------------------------------------------------- */
+
+
+/* Back, Forward, Refresh, Home etc wrapper */
+/* ---------------------------------------------------- */
+.browser-layer-two{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    /* justify-content: space-between; */
+    padding: 0.3em 0;
+}
+
+.browser-layer-two div{
+    width: 75px;
+    text-align: center;
+    cursor:default;
+    user-select: none;
+}
+
+.browser-layer-two div:hover{
+    background-color: aliceblue;
+}
+
+.browser-layer-two{
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+}
+
+.func-button{
+    padding:2px 5px;
+}
+
+.func-button img{
+    width: 30px;
+}
+
+/* ---------------------------------------------------- */
+
+.browser-layer-three{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    /* justify-content: space-between; */
+    /* padding: 0.3em 0; */
+}
+
+.browser-layer-three::before{
+    content:' | ';
+}
+
+.browser-layer-three > p{
+    padding: 0.3em;
+}
+.browser-layer-three input{
+    height: auto;
+    flex-grow: 1;
+}

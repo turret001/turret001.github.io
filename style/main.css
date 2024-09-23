@@ -41,10 +41,3 @@ body{
   height: 100%;
 }
 
-.browser-buttons{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em;
-}
-

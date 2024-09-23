@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/card.css" />
+    <link rel="stylesheet" href="style/browser.css" />
   </head>
 
   <body>
@@ -66,46 +67,56 @@
               <h2 class="card-title">Internet Explorer</h2>
               <p>X</p>
             </div>
-            <div class="browser-buttons">
-              <ul>
-                <li>File</li>
-                <li>Edit</li>
-                <li>View</li>
-                <li>Go</li>
-                <li>Favorites</li>
-                <li>Help</li>
-              </ul>
+            <div class="browser-bar">
+              <div class="browser-layer-one">
+                <div class="browser-buttons">
+                  <ul>
+                    <li>File</li>
+                    <li>Edit</li>
+                    <li>View</li>
+                    <li>Go</li>
+                    <li>Favorites</li>
+                    <li>Help</li>
+                  </ul>
+                </div>
+                <p>🌍</p>
+              </div>
+              <div class="browser-layer-two">
+                <div class="func-button">
+                  <img src="images/icons/back_result.png" alt="" srcset="">
+                  <p>Back</p>
+                </div>
+                <div class="func-button">
+                  <img src="images/icons/forward_result.png" alt="" srcset="">
+                  <p>Forwards</p>
+                </div>
+                <!-- TODO: center the STOP image on photoshop -->
+                <div class="func-button">
+                  <img src="images/icons/stop_result.png" alt="" srcset=""> 
+                  <p>Stop</p>
+                </div>
+                <div class="func-button">
+                  <img src="images/icons/reload_result.png" alt="" srcset="">
+                  <p>Refresh</p>
+                </div>
+                <div class="func-button">
+                  <img src="images/icons/gohome_result.png" alt="" srcset="">
+                  <p>Home</p>
+                </div>
+              </div>
+
+              <div class="browser-layer-three">
+                <p>Address</p>
+                <input type="text" name="" id="address-bar">
+                <p>| Links</p>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-  <script>
-    $(function(){
-            var locationPicker = $('.location-picker').locationPicker({
-                locationChanged : function(data){
-                    $('#output').text(JSON.stringify(data));
-                }
-            });
-    });
-    </script> 
-  <script>
-    let x = document.getElementById("w-title");
 
-    function getLocation(){
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        alert("Geolocation is not supported by this browser.");
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-
-    function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-    }
-  </script>
+ 
   </body>
 </html>
